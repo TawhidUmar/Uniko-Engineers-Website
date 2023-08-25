@@ -1,0 +1,179 @@
+
+
+*{
+  font-family: 'Urbanist', sans-serif;
+}
+
+
+
+.bg-primary {
+    background: rgb(253,127,0) ;
+}
+
+.text-primary{
+    color: rgb(253,127,0) ;
+}
+
+.bg-secondary {
+    background: rgb(24,116,210);
+}
+
+.text-secondary{
+    color: rgb(24,116,210);
+}
+
+.slider .slider-animation {
+    width: 1500px;
+    animation: scroll 10s linear infinite;
+  }
+  .slider .slider-animation:hover {
+    animation-play-state: paused;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0)
+    }
+    95% {
+      transform: translateX(-300px)
+    }
+    100% {
+      transform: translateX(-50px)
+    }
+  }
+
+
+  @media only screen and (max-width: 800px){
+    .slider .slider-animation {
+      animation-duration: 20s;
+    }
+    @keyframes scroll {
+      95%{
+        transform: translateX(-500px)
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px){
+    .slider .slider-animation {
+      animation-duration: 30s;
+    }
+    @keyframes scroll {
+      95%{
+        transform: translateX(-800px)
+      }
+    }
+  }
+
+
+
+
+  .carousel {
+    overflow: hidden;
+  }
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  .carousel-item {
+    flex: 0 0 100%;
+  }
+  .carousel-prev,
+  .carousel-next {
+    cursor: pointer;
+  }
+
+
+  @keyframes spinAnimate {
+    from{
+      transform: rotate(0deg);
+    } to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spinAnimate02 {
+    from{
+      transform: rotate(0deg);
+    } to {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .spin01{
+    animation: spinAnimate 6s ease-in-out infinite;
+  }
+
+  .spin02{
+    animation: spinAnimate02 5s 1s ease-in-out infinite;
+  }
+  
+
+
+
+  
+  .team {
+    width: 100%;
+    
+  }
+  
+  .team > .slide {
+    width: calc(100% - 10px);
+    margin-right: 10px;
+
+    
+  }
+  
+  .team .slide:last-child {
+    margin-right: 0;
+  }
+  
+  
+ 
+  .modal {
+    transition: opacity 0.25s ease;
+  }
+  body.modal-active {
+    overflow-x: hidden;
+    overflow-y: visible !important;
+  }
+
+
+  .video{
+    width: 720px;
+    height: 480px;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .video{
+      width: 640px;
+      height: 360px;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    .video{
+      width: 540px;
+      height: 280px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .video{
+      width: 360px;
+      height: 240px;
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    .video{
+      width: 320px;
+      height: 180px;
+    }
+  }
+
+
+  
+ .project:hover .project-btn{
+    display: flex;
+ }
